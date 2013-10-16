@@ -13,7 +13,20 @@ class users_controller extends base_controller {
 	}
 
 	public function signup(){
-		echo "this is the signup page";
+		# displays signup 
+
+		# setup view
+			$this->template->content = View::instance('v_users_signup');
+			$this->template->title = "Sign Up";
+		# render
+			echo $this->template;
+	}
+
+	public function p_signup(){
+		#dump the results of POST
+		echo '<pre>';
+		print_r($_POST);
+		echo'<pre>';
 	}
 
 	public function login(){
@@ -24,12 +37,12 @@ class users_controller extends base_controller {
 		echo "this is the logout page";
 	}
 	
-	public function profile($user_name == NULL){
+	public function profile($user_name = NULL){
 
 		# Create a new View instance
 		# Do not include .php with the view name
 		#pass this view fragment to templates content
-		this->template->content = View::instance('v_users_profile');
+		$this->template->content = View::instance('v_users_profile');
 
 		# set title in template
 		$this->template->title = "Profile";
