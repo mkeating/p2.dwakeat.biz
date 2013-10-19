@@ -12,6 +12,23 @@
 
 <body>	
 
+	<div id='menu'>
+		<a href='/'>Home</a>
+
+		<!-- Menu for logged in users -->
+		<?php if($user): ?>
+
+			<a href='/users/logout'>Logout</a>
+			<a href='/users/profile'>Profile</a>
+		<!-- Menu for non-logged in users -->
+		<?php else: ?>
+			<a href='/users/signup'>Sign Up</a>
+			<a href='/users/login'>Log In</a>
+		<?php endif; ?>
+	</div>
+
+	<br>	
+
 	<?php if(isset($content)) echo $content; ?>
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
