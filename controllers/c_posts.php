@@ -46,12 +46,17 @@ class posts_controller extends base_controller{
 
 		# build the query
 		$q = "SELECT
-				posts .*,
+				posts.content,
+				posts.created,
+				posts.user_id AS post_user_id,
 				users.first_name,
 				users.last_name
 			FROM posts
-			INNER JOIN users 
-				ON posts.user_id = users.user_id";
+			INNER JOIN users_users 
+				ON posts.user_id = users_users.user_id_followed
+			INNER JOIN users
+				ON posts.user_id = users.user_id
+			WHERE users_users.user_id = ".$this->user->user_id;
 
 		# run the query
 		$posts = DB::instance(DB_NAME)->select_rows($q);
@@ -97,7 +102,7 @@ class posts_controller extends base_controller{
 		# prepare the array to be inserted
 		$data = Array(
 			"created" => Time::now(),
-			"user_id" => $this->user-user_id,
+			"user_id" => $this->user->user_id,
 			"user_id_followed" => $user_id_followed
 			);
 

@@ -20,6 +20,7 @@
 
 			<a href='/users/logout'>Logout</a>
 			<a href='/users/profile'>Profile</a>
+			<a href='/posts/add'>New Post</a>
 		<!-- Menu for non-logged in users -->
 		<?php else: ?>
 			<a href='/users/signup'>Sign Up</a>
