@@ -1,0 +1,10 @@
+body{
+	color:red;
+}
+
+
+/*this is too push down content to make room for navbar */
+.buffer{
+	min-height: 50px;
+
+}

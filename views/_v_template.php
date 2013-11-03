@@ -4,34 +4,62 @@
 	<title><?php if(isset($title)) echo $title; ?></title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
-					
+
+	<!-- Bootstrap stuff -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/custom.css" rel="stylesheet">
+	<script src="../js/respond.js"></script>					
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 	
 </head>
 
-<body>	
-
-	<div id='menu'>
-		<a href='/'>Home</a>
-
-		<!-- Menu for logged in users -->
+<body>
+	<div class="container">
+		<!-- if user is logged in, show menu (for non-home pages) -->
 		<?php if($user): ?>
+				s<!-- nav -->
+				<div class="row">
+					<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+								<span class="sr-only">Toggle Navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse" id="collapse">
+							<!--<div class="home pull-left">
+								<a href="index.html">Arrive</a>
+							</div>-->
+							<ul class="nav navbar-nav pull-right">
+								<li><a href='/'>Home</a></li>
+								<li><a href='/users/logout'>Logout</a></li>
+								<li><a href='/users/profile'>Profile</a></li>
+								<li><a href='/posts/add'>New Post</a></li>
+								<li><a href='/posts/users'>Find People</a></li>
 
-			<a href='/users/logout'>Logout</a>
-			<a href='/users/profile'>Profile</a>
-			<a href='/posts/add'>New Post</a>
-		<!-- Menu for non-logged in users -->
-		<?php else: ?>
-			<a href='/users/signup'>Sign Up</a>
-			<a href='/users/login'>Log In</a>
-		<?php endif; ?>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<!-- end of nav -->
+		<?php endif ?>	
+
+		<div class="buffer"></div>
+
+		<div class="row">
+			<div class="col-lg-2 col-md-2 col-sm-0"></div>
+			<div class="col-lg-8 col-md-8 col-sm-12">
+			<?php if(isset($content)) echo $content; ?>
+			<div class="col-lg-2 col-md-2 col-sm-0"></div>
+		</div>
+		<?php if(isset($client_files_body)) echo $client_files_body; ?>
 	</div>
-
-	<br>	
-
-	<?php if(isset($content)) echo $content; ?>
-
-	<?php if(isset($client_files_body)) echo $client_files_body; ?>
+	<!-- Javascript -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
