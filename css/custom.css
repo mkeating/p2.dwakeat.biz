@@ -1,8 +1,10 @@
 body{
-	color:red;
+	
 }
 
-
+.post{
+	border: 1px solid black;
+}
 /*this is too push down content to make room for navbar */
 .buffer{
 	min-height: 50px;

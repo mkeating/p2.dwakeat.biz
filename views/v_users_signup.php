@@ -1,20 +1,22 @@
-<form method='POST' action='/users/p_signup'>
+<form method='POST' action='/users/p_signup' role="form">
+	<div class="form_group">
+		<label for="first_name">First Name</label>
+		<input type='text' name='first_name' class="form-control" placeholder="First name">
 
-	First Name<br>
-	<input type='text' name='first_name'>
-	<br><br>
+	</div>
+	<div class="form_group">
+		<label for="last_name">Last Name</label>
+		<input type='text' name='last_name' class="form-control" placeholder="Last name">
+	</div>
+	<div class="form_group">
+		<label for="email">Email</label>
+		<input type='text' name='email' class="form-control" placeholder="Email">
 
-	Last Name<br>
-	<input type='text' name='last_name'>
-	<br><br>
-
-	Email<br>
-	<input type='text' name='email'>
-	<br><br>
-
-	Password<br>
-	<input type='password' name='password'>
-	<br><br>
-
-	<input type='submit' value='Sign Up'>
+	</div>
+	<div class="form_group">
+		<label for="password">Password</label>
+		<input type='password' name='password' class="form-control" placeholder="Password">
+	</div>
+	<br>
+		<button type='submit' class="btn btn-default">Submit</button>
 </form>
