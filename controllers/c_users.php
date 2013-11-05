@@ -31,14 +31,25 @@ class users_controller extends base_controller {
 		#encrypt password
 		$_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 
-		#creat encrypted token via email and a random string
+		#create encrypted token via email and a random string
 		$_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
 
 		#Insert into the db
 		$user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
-		# temp confirm
-		Router::redirect("/users/profile");
+		# send confirmation email
+		$to = $_POST['email'];
+		$subject = 'Welcome to Salvo';
+		$message = "Thanks for registering for Salvo: the world's smallest microblog.";
+
+		mail($to, $subject, $message);
+
+		# log in the new user
+
+		setcookie("token", $_POST['token'], strtotime('+2 weeks'), '/');
+
+		# redirect to 'Find People'
+		Router::redirect('/posts/users');
 		
 	}
 
@@ -79,19 +90,12 @@ class users_controller extends base_controller {
 		#found match
 		 else {
 
-			/*store token in a cookie
-			 nothing else can echo to the page before setcookie is called
-			 Not even one single white space.
-        param 1 = name of the cookie
-        param 2 = the value of the cookie
-        param 3 = when to expire
-        param 4 = the path of the cooke (a single forward slash sets it for the entire domain)
-		*/
+			#store token in a cookie
 			setcookie("token", $token, strtotime('+2 weeks'), '/');
 		
 
 			#send to main page
-			Router::redirect("/");
+			Router::redirect("/posts/index");
 		}
 
 	}

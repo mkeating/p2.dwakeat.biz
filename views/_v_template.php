@@ -17,9 +17,9 @@
 
 <body>
 	<div class="container">
-		<!-- if user is logged in, show menu (for non-home pages) -->
+		<!-- if user is logged in, show menu  -->
 		<?php if($user): ?>
-				s<!-- nav -->
+				<!-- nav -->
 				<div class="row">
 					<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 						<div class="navbar-header">
@@ -31,11 +31,8 @@
 							</button>
 						</div>
 						<div class="collapse navbar-collapse" id="collapse">
-							<!--<div class="home pull-left">
-								<a href="index.html">Arrive</a>
-							</div>-->
 							<ul class="nav navbar-nav pull-right">
-								<li><a href='/'>Home</a></li>
+								<li><a href='/posts/index'>Home</a></li>
 								<li><a href='/users/logout'>Logout</a></li>
 								<li><a href='/users/profile'>Profile</a></li>
 								<li><a href='/posts/add'>New Post</a></li>

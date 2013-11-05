@@ -34,8 +34,8 @@ class posts_controller extends base_controller{
 		# insert
 		DB::instance(DB_NAME)->insert('posts', $_POST);
 
-		# feedback
-		echo " post added.  <a href='/posts/add'>add another</a>";
+		#send to main page
+			Router::redirect("/posts/index");
 	}
 
 	public function index(){

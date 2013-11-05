@@ -36,6 +36,7 @@
 							<h1> Salvo </h1>
 							<p>A microblog for CSCI E-15</p>
 							<p><a class="btn btn-primary btn-lg" href="/users/signup">Sign Up</a> or <a href="/users/login">Login</a></p>
+							<p>Features: Login-on-Sign-up</p>
 						</div>
 					</div>
 			</div>

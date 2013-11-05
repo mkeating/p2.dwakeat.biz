@@ -18,7 +18,5 @@
 		</div>
 		<div clas="col-lg-4 col-md-4 col-sm-0"></div>	
 	</div>
-	<div class='row'>
-		<div class='buffer'></div>
-	</div>
+	
 	<?php endforeach; ?>
