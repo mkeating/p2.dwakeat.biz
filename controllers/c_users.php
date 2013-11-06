@@ -38,11 +38,12 @@ class users_controller extends base_controller {
 		$user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
 		# send confirmation email
-		$to = $_POST['email'];
+		$to = Array("name" => "User", "email" => $_POST['email']);
+		$from = Array("name" => APP_NAME,"email" => APP_EMAIL);
 		$subject = 'Welcome to Salvo';
-		$message = "Thanks for registering for Salvo: the world's smallest microblog.";
+		$body = "Thanks for registering for Salvo: the world's smallest microblog.";
 
-		mail($to, $subject, $message);
+		$email = Email::send($to, $from, $subject, $body, true);
 
 		# log in the new user
 
@@ -118,7 +119,7 @@ class users_controller extends base_controller {
 		Router::redirect("/");
 	}
 
-	
+	#for logged in user to edit profile
 	public function profile(){
 
 		#if user is blank, they're not logged in; redirect to login page
@@ -136,6 +137,57 @@ class users_controller extends base_controller {
 
 		# render view
 		echo $this->template;
+	}
+
+	public function p_profile(){
+
+		#if user is blank, they're not logged in; redirect to login page
+		if(!$this->user){
+			Router::redirect('/users/login');
+		}
+
+		#if not redirected, continue:
+
+		# Create the data array we'll use with the update method
+		$data = Array("location" => $_POST['location'],
+						"bio" => $_POST['bio']);
+
+		# Do the update
+		DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = '".$this->user->user_id."'");
+
+		#send to main page
+		Router::redirect("/posts/index");
+
+	}
+
+	# to view public profile of any user
+	public function see_profile($user_id){
+
+		# get this user's data
+		$q = "SELECT 
+				users.first_name,
+				users.last_name,
+				users.location,
+				users.bio
+			FROM users 
+			WHERE user_id=".$user_id;
+
+		$data = DB::instance(DB_NAME)->select_row($q);
+
+		# setup view
+		$view = View::instance('v_users_see_profile');
+		$view->user_name = $data['first_name'];
+		$view->bio = $data['bio'];
+		$view->location = $data['location'];
+
+		//$this->template->content = View::instance('v_users_see_profile');
+
+		# set title in template
+		//$this->template->title = "Profile of ".$data['first_name'];
+
+		# render view
+		echo $view;
+
 	}
 }# end of user_controller class
 

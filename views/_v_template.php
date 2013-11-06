@@ -34,7 +34,7 @@
 							<ul class="nav navbar-nav pull-right">
 								<li><a href='/posts/index'>Home</a></li>
 								<li><a href='/users/logout'>Logout</a></li>
-								<li><a href='/users/profile'>Profile</a></li>
+								<li><a href='/users/profile'>Edit Profile</a></li>
 								<li><a href='/posts/add'>New Post</a></li>
 								<li><a href='/posts/users'>Find People</a></li>
 
