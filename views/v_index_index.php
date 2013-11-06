@@ -1,7 +1,7 @@
 <!-- For logged in users -->
 		<?php if($user): ?>
 			<!-- nav -->
-			<div class="row">
+			<!--<div class="row">
 				<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
@@ -15,7 +15,7 @@
 						<!--<div class="home pull-left">
 							<a href="index.html">Arrive</a>
 						</div>-->
-						<ul class="nav navbar-nav pull-right">
+						<!--<ul class="nav navbar-nav pull-right">
 							<li><a href='/'>Home</a></li>
 							<li><a href='/users/logout'>Logout</a></li>
 							<li><a href='/users/profile'>Profile</a></li>

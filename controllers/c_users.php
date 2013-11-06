@@ -5,24 +5,38 @@ class users_controller extends base_controller {
 
 	public function __construct() {
 		parent::__construct();
-		echo "users_controller construct called<br><br>";
+		//echo "users_controller construct called<br><br>";
 	}
 
-	public function index(){
-		echo "This is the index page";
-	}
-
-	public function signup(){
+	public function signup($error = NULL){
 		# displays signup 
 
 		# setup view
 			$this->template->content = View::instance('v_users_signup');
 			$this->template->title = "Sign Up";
+
+
+		# Pass data to the view
+		$this->template->content->error = $error;
+
 		# render
 			echo $this->template;
 	}
 
 	public function p_signup(){
+
+		#check for empty fields
+		foreach($_POST as $field => $value){
+			if(empty($value)){
+				Router::redirect('/users/signup/empty-fields');
+			}
+		}
+
+		#check for duplicate email
+		if ($this->userObj->confirm_unique_email($email)){
+			#send back to signup page
+			Router::redirect("/users/signup/duplicate");
+		}
 
 		#adding data to the user
 		$_POST['created'] = Time::now();
@@ -161,7 +175,12 @@ class users_controller extends base_controller {
 	}
 
 	# to view public profile of any user
-	public function see_profile($user_id){
+	public function see_profile($user_id=NULL){
+
+		#if user is blank, they're not logged in; redirect to login page
+		if(!$this->user){
+			Router::redirect('/users/login');
+		}
 
 		# get this user's data
 		$q = "SELECT 
@@ -175,18 +194,18 @@ class users_controller extends base_controller {
 		$data = DB::instance(DB_NAME)->select_row($q);
 
 		# setup view
-		$view = View::instance('v_users_see_profile');
-		$view->user_name = $data['first_name'];
-		$view->bio = $data['bio'];
-		$view->location = $data['location'];
 
-		//$this->template->content = View::instance('v_users_see_profile');
+		$this->template->content = View::instance('v_users_seeprofile');
+		$this->template->content->user_name = $data['first_name'];
+		$this->template->content->bio = $data['bio'];
+		$this->template->content->location = $data['location'];
+
 
 		# set title in template
-		//$this->template->title = "Profile of ".$data['first_name'];
+		$this->template->title = "Profile of ".$data['first_name'];
 
 		# render view
-		echo $view;
+		echo $this->template;
 
 	}
 }# end of user_controller class

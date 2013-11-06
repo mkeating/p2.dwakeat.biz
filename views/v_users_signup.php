@@ -17,6 +17,16 @@
 		<label for="password">Password</label>
 		<input type='password' name='password' class="form-control" placeholder="Password">
 	</div>
-	<br>
+	<?php if(isset($error) && $error == 'empty-fields'): ?>
+		<div class='error'>
+			All fields are required.
+		</div>
+	<?php endif; ?>
+	<?php if(isset($error) && $error == 'duplicate'): ?>
+		<div class='error'>
+			Email in use. 
+		</div>
+	<?php endif; ?>
+	<br><br>
 		<button type='submit' class="btn btn-default">Submit</button>
 </form>

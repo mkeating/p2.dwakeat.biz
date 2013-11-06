@@ -19,4 +19,4 @@
 		<div clas="col-lg-4 col-md-4 col-sm-0"></div>	
 	</div>
 	
-	<?php endforeach; ?>
+<?php endforeach; ?>
