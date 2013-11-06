@@ -33,7 +33,7 @@ class users_controller extends base_controller {
 		}
 
 		#check for duplicate email
-		if ($this->userObj->confirm_unique_email($email)){
+		if ($this->userObj->confirm_unique_email($_POST['email']) == false){
 			#send back to signup page
 			Router::redirect("/users/signup/duplicate");
 		}

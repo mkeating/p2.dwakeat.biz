@@ -25,3 +25,39 @@
 2013-11-05 21:30:23 - INFO --> BCC:  
 2013-11-05 21:30:23 - INFO --> Subject: Welcome to Salvo 
 2013-11-05 21:30:23 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:07:06 - INFO --> -------------------------- 
+2013-11-05 22:07:06 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:07:06 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@salvo.com 
+2013-11-05 22:07:06 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:07:06 - INFO --> To: U (U), m (m),  
+2013-11-05 22:07:06 - INFO --> CC:  
+2013-11-05 22:07:06 - INFO --> BCC:  
+2013-11-05 22:07:06 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:07:06 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:07:32 - INFO --> -------------------------- 
+2013-11-05 22:07:32 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:07:32 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@salvo.com 
+2013-11-05 22:07:32 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:07:32 - INFO --> To: U (U), m (m),  
+2013-11-05 22:07:32 - INFO --> CC:  
+2013-11-05 22:07:32 - INFO --> BCC:  
+2013-11-05 22:07:32 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:07:32 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:10:37 - INFO --> -------------------------- 
+2013-11-05 22:10:37 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:10:37 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@salvo.com 
+2013-11-05 22:10:37 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:10:37 - INFO --> To: U (U), m (m),  
+2013-11-05 22:10:37 - INFO --> CC:  
+2013-11-05 22:10:37 - INFO --> BCC:  
+2013-11-05 22:10:37 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:10:37 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:12:18 - INFO --> -------------------------- 
+2013-11-05 22:12:18 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:12:18 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@salvo.com 
+2013-11-05 22:12:18 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:12:18 - INFO --> To: U (U), l (l),  
+2013-11-05 22:12:18 - INFO --> CC:  
+2013-11-05 22:12:18 - INFO --> BCC:  
+2013-11-05 22:12:18 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:12:18 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
