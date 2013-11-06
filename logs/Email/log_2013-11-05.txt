@@ -113,3 +113,11 @@
 2013-11-05 22:39:15 - INFO --> BCC:  
 2013-11-05 22:39:15 - INFO --> Subject: Welcome to JavaBeans 
 2013-11-05 22:39:15 - INFO --> Body: Hi Judy, this is just a message to confirm your registration at JavaBeans.com 
+2013-11-05 22:42:20 - INFO --> -------------------------- 
+2013-11-05 22:42:20 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:42:20 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:42:20 - INFO --> To: Michael (mkeating2225@gmail.com),  
+2013-11-05 22:42:20 - INFO --> CC:  
+2013-11-05 22:42:20 - INFO --> BCC:  
+2013-11-05 22:42:20 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:42:20 - INFO --> Body: Hope you enjoy Salvo, the world's smallest microblog! 

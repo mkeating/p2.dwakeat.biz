@@ -7,9 +7,9 @@
 
 	<!-- Bootstrap stuff -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/custom.css" rel="stylesheet">
-	<script src="../js/respond.js"></script>					
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/custom.css" rel="stylesheet">
+	<script src="/js/respond.js"></script>					
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 	
@@ -57,6 +57,6 @@
 	</div>
 	<!-- Javascript -->
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
