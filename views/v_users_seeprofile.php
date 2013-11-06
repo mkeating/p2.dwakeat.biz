@@ -1,9 +1,7 @@
-<div class="row">
-	<div class="col-lg-4"></div>
-	<div class="col-lg-4">
+<div class="bio">
 	<h1>This is the profile for <?=$user_name?></h1>
-	Location:<?=$location?>
+	<h2>Location:</h2><?=$location?>
 	<br>
-	Bio:<?=$bio?></div>
-	<div class="col-lg-4"></div>
+	<h2>Bio:</h2><?=$bio?>
+	
 </div>

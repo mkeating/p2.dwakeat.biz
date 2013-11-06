@@ -1,7 +1,7 @@
 <div class="row">
 	<form method='POST' action='/posts/p_add'>
 
-		<label for='content'> New Post:</label><br>
+		<h1><label for='content'> New Post:</label></h1><br>
 		<textarea name='content' id='content'></textarea>
 
 		<br><br>

@@ -4,19 +4,23 @@
 		<input type='text' name='first_name' class="form-control" placeholder="First name">
 
 	</div>
+	<br>
 	<div class="form_group">
 		<label for="last_name">Last Name</label>
 		<input type='text' name='last_name' class="form-control" placeholder="Last name">
 	</div>
+	<br>
 	<div class="form_group">
 		<label for="email">Email</label>
 		<input type='text' name='email' class="form-control" placeholder="Email">
 
 	</div>
+	<br>
 	<div class="form_group">
 		<label for="password">Password</label>
 		<input type='password' name='password' class="form-control" placeholder="Password">
 	</div>
+	<br>
 	<?php if(isset($error) && $error == 'empty-fields'): ?>
 		<div class='error'>
 			All fields are required.

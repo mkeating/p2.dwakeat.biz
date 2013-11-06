@@ -1,9 +1,8 @@
 body{
-	
 }
 
 .post{
-	border: 1px solid black;
+	border: 1px solid gray;
 	padding: 20px;
 	margin:10px;
 	border-radius: 15px;
@@ -13,7 +12,34 @@ body{
 	min-height: 50px;
 
 }
+.jumbotron{
+	border: 1px solid gray;
+	margin: 10px;
+}
 
-.label{
-	color:red;
+.jumbotron .container .title{
+
+	padding:20px;
+}
+
+.name{
+	font-size: 1.2em;
+	font-style: italic;
+}
+
+#content{
+	width:100%;
+}
+
+.bio{
+	border: 1px solid gray;
+	border-radius: 15px;
+	margin: 50px;
+	padding: 40px;
+}
+
+.wrap{
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	padding:15px;
 }
