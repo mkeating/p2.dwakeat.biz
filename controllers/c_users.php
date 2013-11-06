@@ -52,13 +52,28 @@ class users_controller extends base_controller {
 		$user_id = DB::instance(DB_NAME)->insert('users', $_POST);
 
 		# send confirmation email
-		$to = Array("name" => "User", "email" => $_POST['email']);
-		$from = Array("name" => APP_NAME,"email" => APP_EMAIL);
-		$subject = 'Welcome to Salvo';
-		$body = "Thanks for registering for Salvo: the world's smallest microblog.";
+		# Build a multi-dimension array of recipients of this email
+		$to[] = Array("name" => $_POST['first_name'], "email" => $_POST['email']);
 
-		$email = Email::send($to, $from, $subject, $body, true);
+		# Build a single-dimension array of who this email is coming from
+		# note it's using the constants we set in the configuration above)
+		$from = Array("name" => APP_NAME, "email" => APP_EMAIL);
 
+		# Subject
+		$subject = "Welcome to Salvo";
+
+		# You can set the body as just a string of text
+		$body = "Hope you enjoy Salvo, the world's smallest microblog!";
+
+		# OR, if your email is complex and involves HTML/CSS, you can build the body via a View just like we do in our controllers
+		# $body = View::instance('e_users_welcome');
+
+		# Build multi-dimension arrays of name / email pairs for cc / bcc if you want to 
+		$cc  = "";
+		$bcc = "";
+
+		# With everything set, send the email
+		$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc);
 		# log in the new user
 
 		setcookie("token", $_POST['token'], strtotime('+2 weeks'), '/');

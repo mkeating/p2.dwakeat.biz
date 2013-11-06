@@ -61,3 +61,55 @@
 2013-11-05 22:12:18 - INFO --> BCC:  
 2013-11-05 22:12:18 - INFO --> Subject: Welcome to Salvo 
 2013-11-05 22:12:18 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:19:07 - INFO --> -------------------------- 
+2013-11-05 22:19:07 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:19:07 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@salvo.com 
+2013-11-05 22:19:07 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:19:07 - INFO --> To: m (m), m (m),  
+2013-11-05 22:19:07 - INFO --> CC:  
+2013-11-05 22:19:07 - INFO --> BCC:  
+2013-11-05 22:19:07 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:19:07 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:30:57 - INFO --> -------------------------- 
+2013-11-05 22:30:57 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:30:57 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@salvo.com 
+2013-11-05 22:30:57 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:30:57 - INFO --> To: t (t), m (m),  
+2013-11-05 22:30:57 - INFO --> CC:  
+2013-11-05 22:30:57 - INFO --> BCC:  
+2013-11-05 22:30:57 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:30:57 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:33:28 - INFO --> -------------------------- 
+2013-11-05 22:33:28 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:33:28 - INFO --> OUTGOING EMAILS ARE DISABLED. THIS EMAIL WAS NOT SENT TO THE RECIPIENTS, ONLY webmaster@salvo.com 
+2013-11-05 22:33:28 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:33:28 - INFO --> To: M (M), m (m),  
+2013-11-05 22:33:28 - INFO --> CC:  
+2013-11-05 22:33:28 - INFO --> BCC:  
+2013-11-05 22:33:28 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:33:28 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:34:58 - INFO --> -------------------------- 
+2013-11-05 22:34:58 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:34:58 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:34:58 - INFO --> To: M (M), m (m),  
+2013-11-05 22:34:58 - INFO --> CC:  
+2013-11-05 22:34:58 - INFO --> BCC:  
+2013-11-05 22:34:58 - INFO --> Subject: Welcome to Salvo 
+2013-11-05 22:34:58 - INFO --> Body: Thanks for registering for Salvo: the world's smallest microblog. 
+2013-11-05 22:34:58 - INFO --> FAILED TO SEND EMAIL 
+2013-11-05 22:37:36 - INFO --> -------------------------- 
+2013-11-05 22:37:36 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:37:36 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:37:36 - INFO --> To: Judy Grimes (mkeating2225@gmail.com),  
+2013-11-05 22:37:36 - INFO --> CC:  
+2013-11-05 22:37:36 - INFO --> BCC:  
+2013-11-05 22:37:36 - INFO --> Subject: Welcome to JavaBeans 
+2013-11-05 22:37:36 - INFO --> Body: Hi Judy, this is just a message to confirm your registration at JavaBeans.com 
+2013-11-05 22:39:15 - INFO --> -------------------------- 
+2013-11-05 22:39:15 - INFO --> Controller/Method: users/p_signup 
+2013-11-05 22:39:15 - INFO --> From: Salvo (webmaster@salvo.com) 
+2013-11-05 22:39:15 - INFO --> To: Judy Grimes (mkeating2225@gmail.com),  
+2013-11-05 22:39:15 - INFO --> CC:  
+2013-11-05 22:39:15 - INFO --> BCC:  
+2013-11-05 22:39:15 - INFO --> Subject: Welcome to JavaBeans 
+2013-11-05 22:39:15 - INFO --> Body: Hi Judy, this is just a message to confirm your registration at JavaBeans.com 
